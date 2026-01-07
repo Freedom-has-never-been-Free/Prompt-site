@@ -1,0 +1,11 @@
+[
+  {
+    "id": "pack_starter",
+    "slug": "starter-pack",
+    "title": "Starter Pack",
+    "description": "A tiny pack to show how packs work.",
+    "prompt_slugs": ["rewrite-for-clarity", "cold-email-generator"],
+    "created_at": "2026-01-05",
+    "updated_at": "2026-01-05"
+  }
+]
