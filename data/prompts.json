@@ -31,9 +31,9 @@
       { "key": "offer", "label": "Offer", "required": true, "description": "What you're offering" },
       { "key": "value_prop", "label": "Value proposition", "required": true, "description": "Why they should care" },
       { "key": "cta", "label": "Call to action", "required": true, "description": "What you want them to do" }
-    ],
-  {
-  "id": "test-prompt",
+    ]
+  },
+"id": "test-prompt",
   "slug": "confidence-check",
   "title": "Confidence Check",
   "description": "Prove the system is working",
@@ -43,6 +43,4 @@
   "created_at": "2026-01-10",
   "updated_at": "2026-01-10"
 }
-
- }
 ]
