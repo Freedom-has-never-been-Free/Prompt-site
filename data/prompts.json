@@ -33,6 +33,7 @@
       { "key": "cta", "label": "Call to action", "required": true, "description": "What you want them to do" }
     ]
   },
+  {
 "id": "test-prompt",
   "slug": "confidence-check",
   "title": "Confidence Check",
