@@ -6,14 +6,14 @@
     "short_description": "Rewrite text to be clearer, shorter, and easier to understand.",
     "category_id": "writing",
     "tags": ["rewrite", "clarity", "writing"],
-    "prompt_template": "You are a careful editor.\n\nRewrite the following text for clarity while preserving meaning.\n\nConstraints:\n- Target audience: {{audience}}\n- Tone: {{tone}}\n- Keep it under {{max_words}} words\n- If facts are unclear, flag them instead of inventing.\n\nText:\n{{input_text}}\n\nOutput format:\n- Provide the rewritten version\n- Then list 3 bullet points explaining the main changes",
+    "prompt_template": "You are a careful editor.\n\nRewrite the following text for clarity.\n\nInputs:\n- Audience: {{audience}}\n- Tone: {{tone}}\n- Max words: {{max_words}}\n\nText:\n{{input_text}}",
     "input_fields": [
-      { "key": "audience", "label": "Audience", "required": true, "description": "Who this is written for" },
-      { "key": "tone", "label": "Tone", "required": true, "description": "Friendly, formal, direct, etc." },
-      { "key": "max_words", "label": "Max words", "required": true, "description": "Word limit (number)" },
-      { "key": "input_text", "label": "Input text", "required": true, "description": "Text to rewrite" }
+      { "key": "audience", "label": "Audience", "required": true },
+      { "key": "tone", "label": "Tone", "required": true },
+      { "key": "max_words", "label": "Max words", "required": true },
+      { "key": "input_text", "label": "Input text", "required": true }
     ],
-    "output_format": { "type": "text", "description": "Rewritten text + 3 bullets explaining changes" },
+    "output_format": { "type": "text", "description": "Rewritten text" },
     "created_at": "2026-01-05",
     "updated_at": "2026-01-05"
   },
@@ -24,24 +24,27 @@
     "short_description": "Generate a short cold email with a clear ask and a polite close.",
     "category_id": "business",
     "tags": ["email", "sales", "outreach"],
-    "prompt_template": "Write a cold email.\n\nInputs:\n- Sender: {{sender}}\n- Recipient role: {{recipient_role}}\n- Product/service: {{offer}}\n- Value proposition: {{value_prop}}\n- Call to action: {{cta}}\n\nConstraints:\n- 120-170 words\n- No hype, no exclamation marks\n- Clear subject line\n\nOutput format:\nSubject: ...\n\nBody:\n...\n",
+    "prompt_template": "Write a cold email.\n\nInputs:\n- Sender: {{sender}}\n- Recipient role: {{recipient_role}}\n- Offer: {{offer}}\n- Value proposition: {{value_prop}}\n- Call to action: {{cta}}",
     "input_fields": [
-      { "key": "sender", "label": "Sender", "required": true, "description": "Your name/company" },
-      { "key": "recipient_role", "label": "Recipient role", "required": true, "description": "Who you're emailing" },
-      { "key": "offer", "label": "Offer", "required": true, "description": "What you're offering" },
-      { "key": "value_prop", "label": "Value proposition", "required": true, "description": "Why they should care" },
-      { "key": "cta", "label": "Call to action", "required": true, "description": "What you want them to do" }
-    ]
+      { "key": "sender", "label": "Sender", "required": true },
+      { "key": "recipient_role", "label": "Recipient role", "required": true },
+      { "key": "offer", "label": "Offer", "required": true },
+      { "key": "value_prop", "label": "Value proposition", "required": true },
+      { "key": "cta", "label": "Call to action", "required": true }
+    ],
+    "output_format": { "type": "text", "description": "Cold email" },
+    "created_at": "2026-01-05",
+    "updated_at": "2026-01-05"
   },
   {
-"id": "test-prompt",
-  "slug": "confidence-check",
-  "title": "Confidence Check",
-  "description": "Prove the system is working",
-  "category": "testing",
-  "prompt": "Tell me one sentence confirming this app is working",
-  "output_format": "text",
-  "created_at": "2026-01-10",
-  "updated_at": "2026-01-10"
-}
+    "id": "test-prompt",
+    "slug": "confidence-check",
+    "title": "Confidence Check",
+    "description": "Prove the system is working",
+    "category": "testing",
+    "prompt": "Tell me one sentence confirming this app is working.",
+    "output_format": "text",
+    "created_at": "2026-01-10",
+    "updated_at": "2026-01-10"
+  }
 ]
