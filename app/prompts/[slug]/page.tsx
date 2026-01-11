@@ -10,7 +10,8 @@ export default function PromptPage({ params }: { params: { slug: string } }) {
       <p style={{ color: "#555" }}>{p.short_description}</p>
 
       <div style={{ color: "#777", fontSize: 13 }}>
-        Category: <b>{p.category_id}</b> · Tags: <b>#{p.tags.join(" #")}</b>
+      Category: <b>{p.category_id}</b> · Tags:{" "}
+      <b>{Array.isArray(p.tags) ? p.tags.join(" #") : ""}</b>
       </div>
 
       <h2 style={{ marginTop: 16 }}>Prompt</h2>
