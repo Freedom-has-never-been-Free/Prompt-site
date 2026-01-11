@@ -48,5 +48,27 @@
   "output_format": { "type": "text", "description": "One sentence" },
   "created_at": "2026-01-10",
   "updated_at": "2026-01-10"
+},
+{
+  "id": "resume-bullet-optimizer",
+  "slug": "resume-bullet-optimizer",
+  "title": "Optimize Resume Bullet Points",
+  "short_description": "Rewrite resume bullets for clarity, impact, and ATS compatibility.",
+  "category_id": "career",
+  "tags": ["resume", "career", "ats"],
+  "prompt_template": "You are an experienced technical recruiter and hiring manager. Rewrite the following resume bullet points to be concise, results-oriented, and ATS-friendly. Use strong action verbs, quantify impact where possible, and remove vague or passive language. Preserve the original meaning while improving clarity, professionalism, and keyword alignment.",
+  "input_fields": [
+    {
+      "key": "resume_bullets",
+      "label": "Resume Bullet Points",
+      "required": true
+    }
+  ],
+  "output_format": {
+    "type": "bullet_points",
+    "description": "Optimized resume bullet points."
+  },
+  "created_at": "2026-01-10",
+  "updated_at": "2026-01-10"
 }
 ]
