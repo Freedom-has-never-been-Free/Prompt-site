@@ -1,4 +1,5 @@
 [
   { "id": "writing", "slug": "writing", "name": "Writing" },
   { "id": "business", "slug": "business", "name": "Business" }
+  { "id": "career", "slug": "career", "name": "Career" }
 ]
