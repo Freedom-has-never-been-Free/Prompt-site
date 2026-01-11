@@ -3,17 +3,17 @@
     "id": "p_rewrite_01",
     "slug": "rewrite-for-clarity",
     "title": "Rewrite for Clarity",
-    "short_description": "Rewrite text to be clearer, shorter, and easier to understand.",
+    "short_description": "Rewrite text to be clearer",
     "category_id": "writing",
     "tags": ["rewrite", "clarity", "writing"],
-    "prompt_template": "You are a careful editor.\n\nRewrite the following text for clarity.\n\nInputs:\n- Audience: {{audience}}\n- Tone: {{tone}}\n- Max words: {{max_words}}\n\nText:\n{{input_text}}",
+    "prompt_template": "You are a careful editor.",
     "input_fields": [
       { "key": "audience", "label": "Audience", "required": true },
       { "key": "tone", "label": "Tone", "required": true },
       { "key": "max_words", "label": "Max words", "required": true },
       { "key": "input_text", "label": "Input text", "required": true }
     ],
-    "output_format": { "type": "text", "description": "Rewritten text" },
+    "output_format": { "type": "text" },
     "created_at": "2026-01-05",
     "updated_at": "2026-01-05"
   },
@@ -21,10 +21,10 @@
     "id": "p_email_01",
     "slug": "cold-email-generator",
     "title": "Cold Email Generator",
-    "short_description": "Generate a short cold email with a clear ask and a polite close.",
+    "short_description": "Generate a short cold email",
     "category_id": "business",
     "tags": ["email", "sales", "outreach"],
-    "prompt_template": "Write a cold email.\n\nInputs:\n- Sender: {{sender}}\n- Recipient role: {{recipient_role}}\n- Offer: {{offer}}\n- Value proposition: {{value_prop}}\n- Call to action: {{cta}}",
+    "prompt_template": "Write a cold email.",
     "input_fields": [
       { "key": "sender", "label": "Sender", "required": true },
       { "key": "recipient_role", "label": "Recipient role", "required": true },
@@ -32,7 +32,7 @@
       { "key": "value_prop", "label": "Value proposition", "required": true },
       { "key": "cta", "label": "Call to action", "required": true }
     ],
-    "output_format": { "type": "text", "description": "Cold email" },
+    "output_format": { "type": "text" },
     "created_at": "2026-01-05",
     "updated_at": "2026-01-05"
   },
