@@ -1,7 +1,5 @@
 import { getPromptBySlug } from "../../../lib/data";
 import TryIt from "./TryIt";
-<TryIt />
-import TryIt from "./TryIt";
 export default function PromptPage({ params }: { params: { slug: string } }) {
   const p = getPromptBySlug(params.slug);
   if (!p) return <main><h1>Not found</h1></main>;
