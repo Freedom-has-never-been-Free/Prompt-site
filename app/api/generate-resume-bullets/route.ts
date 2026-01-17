@@ -1,29 +1,35 @@
 import OpenAI from "openai";
 
-export const runtime = "nodejs"; // keep it simple/compatible
-
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-function safeArray(x: unknown): string[] {
-  if (!Array.isArray(x)) return [];
-  return x.map(String).map((s) => s.trim()).filter(Boolean);
-}
+export const runtime = "nodejs";
 
 export async function POST(req: Request) {
-  try {
-    const body = await req.json();
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    return new Response(
+      JSON.stringify({ error: "Missing OPENAI_API_KEY on server" }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
+  }
 
-    const roleTitle = String(body.roleTitle || "").trim();
-    const companyIndustry = String(body.companyIndustry || "").trim();
-    const whatYouDid = String(body.whatYouDid || "").trim();
-    const toolsSkills = safeArray(body.toolsSkills);
-    const impact = String(body.impact || "").trim();
+  const client = new OpenAI({ apiKey });
 
-    if (!roleTitle || !whatYouDid) {
-      return new Response("Missing roleTitle or whatYouDid", { status: 400 });
-    }
+  const body = await req.json();
+
+  // ...your instructions/input building here...
+
+  const resp = await client.responses.create({
+    model: "gpt-5",
+    input: [
+      { role: "system", content: "..." },
+      { role: "user", content: "..." },
+    ],
+  });
+
+  return new Response(JSON.stringify(resp.output_text ?? ""), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
+}
 
     const instructions = `
 You are an expert resume writer optimizing for ATS + human readability.
