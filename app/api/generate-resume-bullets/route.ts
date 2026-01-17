@@ -55,12 +55,18 @@ ${impact || "N/A"}
 `;
 
     const resp = await client.responses.create({
-      model: "gpt-5",
-      reasoning: { effort: "low" },
-      instructions,
-      input,
-      // Ask for JSON output (Responses API supports structured outputs; keeping it simple here)
-    });
+  model: "gpt-5",
+  input: [
+    {
+      role: "system",
+      content: instructions,
+    },
+    {
+      role: "user",
+      content: input,
+    },
+  ],
+});
 
     // The Responses API gives convenient output_text. We'll parse JSON from it.
     const text = resp.output_text?.trim() || "";
