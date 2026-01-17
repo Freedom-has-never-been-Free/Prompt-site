@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { useMemo, useState } from "react";
+import { useState, useMemo } from "react";
 
 type ApiResponse = {
   bullets: string[];
